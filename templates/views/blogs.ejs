@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+<link rel="stylesheet" type="text/css" href="/css/blogs.css">
+</head>
+</body>
+<div class="ui five item menu">
+        <a class="item" href="/blogs">All Blogs</a>
+        <a class="item" href="/blogs/myblogs">My Blogs</a>
+        <a class="item" href="/blogs/new">New Blog</a>
+        <a class="item" href="#"><%= username %></a>
+        <a class="item" href="/logout">Logout</a>
+      </div>  
+
+<div class="container">
+<div class="row">
+  <% for(var i=0;i!=blogs.length;i++) { %>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="<%= blogs[i].img_src %>" alt="Card image cap">
+                    <div class="card-body">
+                      <h3><%= blogs[i].title %></h3>
+                        <h5>- <%= blogs[i].createdby %></h5>
+                      <span id="body"><%= blogs[i].body %></span>
+                      <a href="/details/<%= blogs[i]._id %>"><span id="rm">Read More...<span></a>
+                    </div>
+              </div>         
+    </div>  
+    <% } %>
+</div>
+</div>
+<% include ./partials/footer %>

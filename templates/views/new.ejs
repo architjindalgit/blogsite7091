@@ -1,0 +1,37 @@
+<% include ./partials/header.ejs %>
+<link rel="stylesheet" href="/css/new.css">
+</head>
+<body>
+    <div class="ui five item menu">
+        <a class="item" href="/blogs">All Blogs</a>
+        <a class="item" href="/blogs/myblogs">My Blogs</a>
+        <a class="item" href="/blogs/new">New Blog</a>
+        <a class="item" href="#"><%= username %></a>
+        <a class="item" href="/logout">Logout</a>
+      </div>    
+<div class="container">
+<form class="ui form" method="POST" action="/blogs">
+        <div class="field">
+          <label>Title </label>
+          <input type="text" name="blog[title]" placeholder="Title" required>
+        </div>
+        <div class="field">
+          <label>Description</label>
+          <input type="text" name="blog[body]" placeholder="Description" required>
+        </div>
+        <div class="field">
+                <label>Image Link (Optional)</label>
+                <input type="text" name="blog[img_src]" placeholder="Image Link">
+         </div>
+         <div class="field">
+            <label>Enter something</label>
+            <textarea rows="10" name="blog[details]" placeholder="Enter something here..."></textarea>
+          </div>
+          <div class="field">
+            <input type="checkbox" name="blog[createdby]" value="<%= username %>">I agree to T and C
+          </div>
+        <button class="ui button" type="submit">Submit</button>
+</form>
+</div>
+
+<% include ./partials/footer.ejs %>

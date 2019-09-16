@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+<link rel="stylesheet" type="text/css" href="/css/details.css">
+</head>
+</body>
+<div class="ui five item menu">
+    <a class="item" href="/blogs">All Blogs</a>
+    <a class="item" href="/blogs/myblogs">My Blogs</a>
+    <a class="item" href="/blogs/new">New Blog</a>
+    <a class="item" href="#"><%= username %></a>
+    <a class="item" href="/logout">Logout</a>
+    </div>  
+
+    <div class="ui raised very padded text container segment">
+           
+            <!-- <a href="/blogs/del/<%= blog._id %>"><span id="delete">Delete</span></a>  -->
+            <img src="<%= blog.img_src %>" class="img-thumbnail img-fluid"  >
+            <h2 class="ui header"><span id="title"><%= blog.title %></span></h2>
+            <p>-<%= blog.details %></p>
+            <p></p>
+          </div>
+    

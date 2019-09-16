@@ -1,0 +1,21 @@
+{
+  "name": "restful-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1",
+    "nodemon": "^1.19.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node/src/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
