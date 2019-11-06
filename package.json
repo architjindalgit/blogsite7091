@@ -9,7 +9,7 @@
     "express": "^4.17.1",
     "hbs": "^4.0.4",
     "mongodb": "^3.3.2",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.19.2"
   },
   "devDependencies": {},
